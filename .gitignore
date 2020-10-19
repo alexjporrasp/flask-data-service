@@ -130,3 +130,6 @@ dmypy.json
 
 # conf files
 *.conf
+
+# data
+data/
