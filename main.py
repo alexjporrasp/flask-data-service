@@ -14,6 +14,11 @@ def _build_response(cursor, result, collection):
         'next': cursor
     }
 
+@app.route('/')
+def hello():
+    """Return a friendly HTTP greeting."""
+    return 'Hello World!'
+
 @app.route('/stories', methods=['GET'])
 def stories():
     cursor, stories = data.stories(
