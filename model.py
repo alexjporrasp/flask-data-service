@@ -1,6 +1,6 @@
 import flask_pymongo as pymongo
 import re
-from . import config
+import config
 
 def model():
     if config.model() == 'mongodb':

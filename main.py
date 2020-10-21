@@ -1,6 +1,6 @@
 import flask
-from . import config
-from . import model
+import config
+import model
 
 app = flask.Flask(__name__)
 app.config['MONGO_URI'] = config.mongo_uri()
