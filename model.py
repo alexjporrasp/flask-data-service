@@ -92,16 +92,6 @@ class MongoDB:
         return next_cursor, meta
 
     @classmethod
-    def metadata_by_entity_id(cls, entity_id=''):
-        """
-        Return the entity with the given id.
-        """
-        return cls.mongo.db.findOne(
-            { 'rp_enitity_id': entity_id},
-            { '_id': 0 }
-        )
-
-    @classmethod
     def search_meta(cls, params:dict, cursor=0, limit=10):
         if not params:
             return cls.stories()
